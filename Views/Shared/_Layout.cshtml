@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ashok Kumar Yadav</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+            :root {
+                --theme-yellow:black;
+                --theme-yellow-dark: black;
+            }
+
+            body {
+                background-color: #FFFFFF !important;
+                color: var(--theme-black) !important;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            }
+
+            h1, h2, h3, h4, h5, h6, p, span, div, a, label, strong {
+                color: var(--theme-yellow) !important;
+            }
+
+            .navbar {
+                background-color: #FFFFFF !important;
+            }
+
+            .nav-link, .navbar-brand {
+                color: var(--theme-yellow) !important;
+                font-weight: 600;
+            }
+
+            .btn-theme {
+                background-color: var(--theme-yellow) !important;
+                color: #FFFFFF !important;
+                border: none;
+            }
+
+                .btn-theme:hover {
+                    background-color: var(--theme-yellow-dark) !important;
+                    color: #FFFFFF !important;
+                }
+
+            .btn-outline-theme {
+                border: 2px solid var(--theme-yellow) !important;
+                color: var(--theme-yellow) !important;
+                background: transparent;
+            }
+
+                .btn-outline-theme:hover {
+                    background-color: var(--theme-yellow) !important;
+                    color: #FFFFFF !important;
+                }
+
+            .card-custom {
+                border: 1px solid #FFE58F;
+                background-color: #FFFFF0;
+                border-radius: 12px;
+            }
+
+            .badge-theme {
+                background-color: #FFF2B2 !important;
+                color: var(--theme-yellow-dark) !important;
+                font-weight: 500;
+            }
+
+            .form-control {
+                border: 1px solid #FFE58F;
+                color: var(--theme-yellow) !important;
+            }
+
+                .form-control:focus {
+                    border-color: var(--theme-yellow);
+                    box-shadow: 0 0 0 0.25rem rgba(212, 160, 23, 0.25);
+                }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light shadow-sm mb-4">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="badge rounded-circle me-2 p-2" style="background-color: var(--theme-yellow); color: white !important;">AK</span>
+                    Ashok Kumar Yadav
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link px-3" asp-area="" asp-controller="Home" asp-action="Index">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" asp-area="" asp-controller="Contact" asp-action="Index">Get in touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container flex-grow-1">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer border-top py-3 mt-auto">
+        <div class="container text-center">
+            &copy; @DateTime.Now.Year Ashok Kumar Yadav. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        background-color: white !important; /* Soft Light Yellow */
+    }
+</style>
+
+
+<!-- Full-page background wrapper -->
+<div style="background-color: white; color: #000000; font-family: sans-serif; font-size: 1.15rem; min-height: 100vh; margin: -1rem -15px 0 -15px; padding: 2rem 15px;">
+    <div class="container-fluid">
+        <div class="row align-items-stretch g-4">
+
+            <!-- Left Side: Profile Image -->
+            <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                <img src="~/Images/profile.png"
+                     alt="Ashok Kumar Yadav"
+
+                     class="img-fluid rounded shadow-lg"
+                     style="max-height: 130vh; object-fit: cover; width: 100%; border: 4px solid black; box-shadow: 0px 7px 7px rgba(0,0,0,0.2);" />
+            </div>
+
+            <!-- Right Side: Information from CV -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+
+                <!-- Header Section -->
+                <div class="mb-4">
+                    <h1 class="display-3 fw-bold" style="color: #000000;">Ashok Kumar Yadav</h1>
+                    <h3 class="fw-semibold" style="color: #222222;">Frontend and Backend Developer</h3>
+                    <p class="mt-3 leading-relaxed">
+                        I am a Web Developer with a passion for problem-solving and a keen interest in Full-Stack Development.
+                        My proficiency extends to programming languages including Python, Node.js, Express.js, and React.
+                        I am also adept at working with REST APIs and databases such as MySQL and MongoDB.
+                    </p>
+                </div>
+
+                <hr class="my-3" style="border-color: #000000; opacity: 0.5;">
+
+                <!-- Education -->
+                <div class="mb-3">
+                    <h4 class="fw-bold" style="color: #000000;">Education</h4>
+                    <div class="ms-2">
+                        <h5 class="mb-0 fw-bold" style="color: #000000;">BSc. CSIT</h5>
+                        <p class="mb-0">Bhaktapur Multiple Campus (Currently in 6th Sem | 2023 - Present)</p>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="mb-3">
+                    <h4 class="fw-bold" style="color: #000000;">Skills & Tools</h4>
+                    <div class="d-flex flex-wrap gap-2 ms-2">
+                        <span class="badge bg-dark text-white fs-6">HTML/CSS</span>
+                        <span class="badge bg-dark text-white fs-6">JavaScript</span>
+                        <span class="badge bg-dark text-white fs-6">C / C++</span>
+                        <span class="badge bg-dark text-white fs-6">Python</span>
+                        <span class="badge bg-dark text-white fs-6">React / Next.js</span>
+                        <span class="badge bg-dark text-white fs-6">Node.js / Express</span>
+                        <span class="badge bg-dark text-white fs-6">Mongoose</span>
+                        <span class="badge bg-dark text-white fs-6">SQL / MySQL</span>
+                        <span class="badge bg-dark text-white fs-6">MongoDB</span>
+                        <span class="badge bg-dark text-white fs-6">Git / GitHub</span>
+                        <span class="badge bg-dark text-white fs-6">Tableau / Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="mb-3">
+                    <h4 class="fw-bold" style="color: #000000;">Projects</h4>
+                    <ul class="list-unstyled ms-2">
+                        <li class="mb-2">
+                            <strong>Tenzies Game:</strong> Built using React with Bootstrap, state management, deployed via Netlify & GitHub.
+                        </li>
+                        <li>
+                            <strong>Recipe AI:</strong> AI model generating structured recipes using React hooks, conditional rendering, Netlify & GitHub.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Personal Details -->
+                <div class="mb-3">
+                    <h4 class="fw-bold" style="color: #000000;">Contact Details</h4>
+                    <div class="ms-2">
+                        <p class="mb-1"><strong>Location:</strong> Suryabinayak, Nepal</p>
+                        <p class="mb-1"><strong>Phone:</strong> +977 9763493353</p>
+                        <p class="mb-1"><strong>Email:</strong> ay98127634@gmail.com</p>
+                        <p class="mb-0"><strong>Languages:</strong> English, Nepali</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
