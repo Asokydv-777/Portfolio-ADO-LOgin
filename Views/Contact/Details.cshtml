@@ -1,0 +1,26 @@
+﻿@model Portfolio.Models.ContactMessage
+
+@{
+    ViewData["Title"] = "Message Details";
+}
+
+<h2>Message Details</h2>
+
+<dl>
+    <dt>ID</dt>
+    <dd>@Model.Id</dd>
+
+    <dt>Name</dt>
+    <dd>@Model.Name</dd>
+
+    <dt>Email</dt>
+    <dd>@Model.Email</dd>
+
+    <dt>Message</dt>
+    <dd>@Model.Message</dd>
+
+    <dt>Submitted At</dt>
+    <dd>@Model.SubmittedAt.ToString("g")</dd>
+</dl>
+
+<a asp-action="List">Back to List</a>

@@ -1,0 +1,36 @@
+﻿@model List<Portfolio.Models.ContactMessage>
+
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<h2>Contact Messages</h2>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Submitted At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var msg in Model)
+        {
+            <tr>
+                <td>@msg.Id</td>
+                <td>@msg.Name</td>
+                <td>@msg.Email</td>
+                <td>@(msg.Message.Length > 50 ? msg.Message.Substring(0, 50) + "..." : msg.Message)</td>
+                <td>@msg.SubmittedAt.ToString("g")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@msg.Id">View</a> |
+                    <a asp-action="Delete" asp-route-id="@msg.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
