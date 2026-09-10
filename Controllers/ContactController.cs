@@ -20,15 +20,15 @@ namespace Portfolio.Controllers
 
         // POST: Contact/Send
         [HttpPost]
-        public IActionResult Send(ContactMessage message)
+        public IActionResult Send(ContactMessage model)
         {
             if (!ModelState.IsValid)
             {
-                return View("Index", message);
+                return View("Index", model);
             }
 
-            message.SubmittedAt = DateTime.Now;
-            _dal.AddMessage(message);
+            model.SubmittedAt = DateTime.Now;
+            _dal.AddMessage(model);
             TempData["Success"] = "Your message has been sent successfully!";
             return RedirectToAction("Index");
         }
