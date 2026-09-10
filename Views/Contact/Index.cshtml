@@ -1,39 +1,34 @@
-﻿@{
+﻿@model Portfolio.Models.ContactMessage
+
+@{
     ViewData["Title"] = "Contact";
 }
 
-<h2>Get In Touch</h2>
-
-<p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out through any of the channels below.</p>
-
-<ul>
-    <li><strong>Email:</strong> ay98127634@gmail.com</li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/alexowallace">github.com/alexowallace</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ashok-yadav">linkedin.com/in/ashok-yadav</a></li>
-    <li><strong>Location:</strong> Suryabinayak, Nepal</li>
-</ul>
-
-<hr />
+<!-- ... other content ... -->
 
 <h4>Send me a message</h4>
 
 @if (TempData["Success"] != null)
 {
-    <div style="color: green; font-weight: bold;">@TempData["Success"]</div>
+    <div class="alert alert-success">@TempData["Success"]</div>
 }
 
-<form asp-controller="Contact" asp-action="Send" method="post">
-    <div>
-        <label for="Name">Name</label>
-        <input type="text" id="Name" name="Name" required />
+<!-- Ensure the form uses POST method and submits to the Send action -->
+<form asp-action="Send" asp-controller="Contact" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
-    <div>
-        <label for="Email">Email</label>
-        <input type="email" id="Email" name="Email" required />
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
-    <div>
-        <label for="Message">Message</label>
-        <textarea id="Message" name="Message" rows="5" required></textarea>
+    <div class="form-group">
+        <label asp-for="Message">Message</label>
+        <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
     </div>
-    <button type="submit">Send Message</button>
+    <button type="submit" class="btn btn-primary">Send Message</button>
 </form>

@@ -24,7 +24,9 @@
                 <td>@msg.Id</td>
                 <td>@msg.Name</td>
                 <td>@msg.Email</td>
-                <td>@(msg.Message.Length > 50 ? msg.Message.Substring(0, 50) + "..." : msg.Message)</td>
+                <!-- FIXED THIS LINE: Changed item to msg -->
+                <td>@msg.Message</td>
+
                 <td>@msg.SubmittedAt.ToString("g")</td>
                 <td>
                     <a asp-action="Details" asp-route-id="@msg.Id">View</a> |
